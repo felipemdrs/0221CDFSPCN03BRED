@@ -19,7 +19,6 @@
 
         .divisor-cinza {
             background-color: rgb(74, 74,74);
-            height: 50px;
             margin-bottom: 50px;
         }
 
@@ -58,21 +57,65 @@
             height: 150px;
             margin-top: 50px;
         }
+
+        header {
+            border-bottom: 2px solid white;
+        }
+
+        nav {
+            display: flex;
+            background-color: black;
+            margin-bottom: 50px;
+        }
+
+        nav li {
+            list-style: none;
+            display: inline;
+            background-color: black;
+            padding: 10px;
+            height: 20px;
+            border-right: 1px solid white;
+            width: 130px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        ul {
+            padding-inline-start: 0px;
+            margin: 0;
+            display: flex;
+        }
+
+        ul li:hover {
+            background-color: #2f2f2f;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <div id="cabecalho">
+    <header id="cabecalho">
         Trinance
-    </div>
-    <div class="divisor-cinza"></div>
-    <div class="pai">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+    <section class="pai">
         <div class="w-30 texto-grande texto-cinza">
             Welcome to
         </div>
         <div class="w-70 texto-destaque texto-grande">
             TRINANCE
         </div>
-    </div>
-    <div id="footer" class="divisor-cinza"></div>
+    </section>
+    <footer id="footer" class="divisor-cinza"></footer>
 </body>
 </html>
