@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .laranja {
+            background: #F15A24;
+            width: 70%;
+        }
+
+        .verde {
+            background: #22B573;
+            width: 30%;
+        }
+
+        @media (max-width: 768px) {
+            .verde {
+                width: 0%;
+            }
+            
+            .laranja {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="verde">
+            Verde
+        </div>
+        <div class="laranja">
+            Laranja
+        </div>
+    </div>
+</body>
+</html>
