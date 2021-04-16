@@ -1,0 +1,17 @@
+.background.laranja {
+    background: orange;
+    color: white;
+}
+
+.background.blue {
+    background: blue;
+    color: white;
+}
+
+.laranja {
+    color: orange;
+}
+
+.blue {
+    color: blue;
+}
