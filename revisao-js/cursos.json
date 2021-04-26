@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nome": "FullStack JS",
+        "qtdAlunos": 0
+    },
+    {
+        "id": 2,
+        "nome": "UX",
+        "qtdAlunos": 0
+    },
+    {
+        "id": 3,
+        "nome": "Data Science",
+        "qtdAlunos": 0
+    },
+    {
+        "id": 4,
+        "nome": "Desenvolvimento Mobile",
+        "qtdAlunos": 0
+    }
+]
