@@ -40,7 +40,7 @@ Diante disso, deverá ser desenvolvido as seguintes funções:
 ```javascript
 /*Essa função irá receber uma *string* que é nome do aluno a ser criado.
 E seguindo o modelo de aluno, o mesmo deverá ser inserido na lista de alunos.
-A função deve devolver um feedback de sucesso, caso o aluno seja inserido corretamente. Mostrar notas, faltas e média das faltas. */
+A função deve devolver um feedback de sucesso, caso o aluno seja inserido corretamente.*/
 function adicionarAluno(nome: string) {}
 
 /*Com essa função o usuário poderá ver todos os alunos cadastrados atualmente no sistema.
