@@ -1,1 +1,1 @@
-[{"id":816,"nome":"Paulo","cursos":[]},{"id":601,"nome":"Paulo","cursos":[]},{"id":300,"nome":"Emmanuelle","cursos":[]},{"id":425,"nome":"Alexandre","cursos":[]}]
+[{"id":816,"nome":"Paulo","cursos":[]},{"id":601,"nome":"Paulo","cursos":[]},{"id":300,"nome":"Emmanuelle","cursos":[{"cursoId":2,"nomeDoCurso":"UX","dataMatricula":"2021-04-28T23:55:22.487Z","faltas":3,"notas":[]}]},{"id":425,"nome":"Alexandre","cursos":[]}]
