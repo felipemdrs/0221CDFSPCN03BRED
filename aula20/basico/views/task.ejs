@@ -1,0 +1,29 @@
+<style>
+    .task {
+        background-color: #F2F2F2;
+        border-left: 20px solid #727272;
+        padding: 24px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        list-style: none;
+    }
+    
+    .task-done {
+        border-color: #61A500;
+    }
+    
+    .task-cancel {
+        border-color: #CC424C;
+    }
+</style>
+
+<section>
+    <ul>
+        <% for (let task of tasks) { %>
+            <li class="task <%= task.status === 'DONE' ? 'task-done' : '' %>">
+                <%= task.nome %>
+            </li>
+        <% } %>
+    </ul>
+</section>

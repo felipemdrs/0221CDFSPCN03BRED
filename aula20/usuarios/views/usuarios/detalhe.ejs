@@ -1,0 +1,9 @@
+<% if (usuario) { %> 
+    <h1>Detalhes de <%- usuario.nome %></h1>
+
+    Id<h3><%= usuario.id %></h3>
+    Nome<h3><%= usuario.nome %></h3>
+    Idade<h3><%= usuario.idade %></h3>
+<% } else { %>
+    Usuario não encontrado
+<% } %>

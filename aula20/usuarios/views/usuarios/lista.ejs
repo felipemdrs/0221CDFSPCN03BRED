@@ -1,0 +1,7 @@
+<ul>
+    <% for (let usuario of usuarios) { %>
+        <li>
+            <a href="/users/<%= usuario.id %>"><%= usuario.nome %></a>
+        </li>
+    <% } %>
+</ul>
