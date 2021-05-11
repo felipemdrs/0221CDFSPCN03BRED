@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/theme.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <button><a href="/pets/novo" >+ Novo Pet</a></button>
+    <ul>
+      <% for (const pet of pets) { %>
+        <li><%= pet.nome %></li>
+      <%}%>
+    </ul>
+  </body>
+</html>

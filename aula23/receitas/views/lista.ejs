@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+
+<style>
+    li {
+        font-size: 20px;
+    }
+</style>
+
+<div class="container">
+    <ul>
+    <% for (const receita of receitas) { %>
+        <li class="box"><a href="/receitas/<%= receita.id %>"><%= receita.nome %></a></li>
+    <% } %>
+    </ul>
+</div>

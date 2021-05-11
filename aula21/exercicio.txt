@@ -1,0 +1,19 @@
+Uma clinica veterinária deseja criar um sistema para cadastros dos Pet's que
+chegam na empresa. Alguns requisitos tem que ser atendidos
+
+- Cadastre pets
+- Listagem dos pets
+- Categorizar pets como (SILVESTRE, DOMESTICO)
+- Ver detalhes dos pets
+- Edição
+- Deletar pet
+
+1 - Quais telas serão necessárias?
+2 - Quais endpoints?
+3 - Quais informações irei precisar para contemplar os requisitos?
+
+A clinica agora precisa salvar informações do dono do Pet
+
+Tipo de animal (que animal seria)
+Raça
+Idade

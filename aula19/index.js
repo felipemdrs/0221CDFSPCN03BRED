@@ -8,6 +8,8 @@ app.get('/alunos/list', alunosController.listar)
 app.put('/alunos/:id', alunosController.atualizar)
 app.delete('/alunos/:id', alunosController.deletar)
 
+// CRUD de Animal
+
 app.listen(8080, () => {
     console.log('listening')
 })

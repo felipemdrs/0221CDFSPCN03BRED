@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+
+<style>
+    .container {
+        width: 50%;
+        background: #f5f5f5;
+        padding: 20px;
+    }
+</style>
+
+<div class="container">
+    <form action="/receitas" method="POST">
+        <div class="field">
+            <label class="label" for="nome">Nome da receita</label>
+            <div class="control">
+                <input class="input" type="text" name="nome" autocomplete="off" required/>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="ingredientes">Ingredientes</label>
+            <div class="control">
+                <textarea class="textarea" name="ingredientes" required></textarea>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="preparo">Tempo de preparo</label>
+            <div class="control">
+                <input class="input" type="text" name="preparo" autocomplete="off" required/>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="porcoes">Porções</label>
+            <div class="control">
+                <input class="input" type="text" name="porcoes" autocomplete="off" required/>
+            </div>
+        </div>
+
+        <input class="button is-primary" type="submit" value="Criar"/>
+    </form>
+</div>
