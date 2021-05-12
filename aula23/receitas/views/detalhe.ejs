@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-
+<%- include partials/header.ejs %>
 <style>
     h1 {
         font-size: 30px;
@@ -8,11 +7,40 @@
     li {
         font-size: 18px;
     }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    h6 {
+        font-size: 20px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .block {
+        margin-left: 20px;
+    }
 </style>
 
 <div class="container">
     <% if (receita) { %>
-        <h1><%= receita.nome %></h1>
+        <div class="flex">
+            <h1><%= receita.nome %></h1>
+            <div class="block">
+                <div>
+                    <h6><%= receita.porcoes %> porções</h6>
+                </div>
+            </div>
+            <div class="block">
+                <div>
+                    <h6><%= receita.preparo %></h6>
+                </div>
+            </div>
+        </div>
         <hr />
         <% const ingredientes = receita.ingredientes.split('\n') %>
         <ul>

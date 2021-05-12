@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-
+<%- include partials/header.ejs %>
 <style>
-    li {
+    .pagina-lista li {
         font-size: 20px;
     }
 </style>
 
-<div class="container">
+<div class="container pagina-lista">
     <ul>
     <% for (const receita of receitas) { %>
         <li class="box"><a href="/receitas/<%= receita.id %>"><%= receita.nome %></a></li>

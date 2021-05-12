@@ -1,0 +1,24 @@
+<style>
+    nav li {
+        display: inline;
+        background: burlywood;
+        padding: 20px;
+    } 
+
+    .selecionado {
+        background: chocolate;
+    }
+
+    nav {
+        height: 100px;
+    } 
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+
+<nav>
+    <ul>
+        <li class="<%= pagina === 'lista' ? 'selecionado' : '' %>"><a href="/receitas">Home</a></li>
+        <li class="<%= pagina === 'criar' ? 'selecionado' : '' %>"><a href="/receitas/nova">Nova</a></li>
+    </ul>
+</nav>
