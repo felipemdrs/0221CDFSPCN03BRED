@@ -43,4 +43,19 @@ router.get('/lista', (req, res) => {
     })
 })
 
+router.post('/deletar/:id', (req, res) => {
+    const id = parseInt(req.params.id)
+
+    for (let i = array.length - 1; i >= 0; i--) {
+        const receita = array[i]
+
+        if (receita.id === id) {
+            array.splice(i, 1)
+            break
+        }
+    }
+
+    res.redirect('/receitas')
+})
+
 module.exports = router;
