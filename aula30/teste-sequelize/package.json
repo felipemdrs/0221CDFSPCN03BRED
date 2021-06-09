@@ -1,0 +1,16 @@
+{
+  "name": "teste-sequelize",
+  "version": "",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sequelize": "^5.21.13",
+    "sequelize-cli": "^6.2.0"
+  }
+}
