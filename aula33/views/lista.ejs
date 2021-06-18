@@ -1,0 +1,14 @@
+<form action="/pessoas/buscar" method="GET">
+    <input name="nome" type="search">
+    <input type="submit" value="Pesquisar">
+</form>
+
+<% if (resultados.length > 0) { %>
+    <ul>
+    <% for (const resultado of resultados) { %>
+        <li><%= resultado.nome %></li>
+    <% } %>
+    </ul>
+<% } else { %>
+    <h3>Nenhum resultado encontrado</h3>
+<% } %>

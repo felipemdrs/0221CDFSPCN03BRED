@@ -1,0 +1,11 @@
+<form method="POST" action="/dependentes">
+    <label for="nome">Nome</label>
+    <input name="nome" type="text" required/>
+    <label for="cpfTitular">CPF</label>
+    <input name="cpfTitular" type="text" required/>
+    <input type="submit" value="Enviar" />
+</form>
+
+<% if (error) { %>
+<h2><%= error %></h2>
+<%}%>
