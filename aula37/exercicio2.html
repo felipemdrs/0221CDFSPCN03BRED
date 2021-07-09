@@ -1,0 +1,29 @@
+<style>
+    .spoiler {
+        background-color: black;
+        color: black;
+    }
+</style>
+
+<script>
+    let botao = document.querySelector('button')
+    let spoiler = document.querySelector('div')
+
+    botao.onclick = () => {
+        spoiler.classList.toggle('spoiler')
+        let conteudo = botao.innerText
+
+        if (conteudo.indexOf('Ocultar') == -1) {
+            conteudo = conteudo.replace('Exibir', 'Ocultar') 
+        } else {
+            conteudo = conteudo.replace('Ocultar', 'Exibir')
+        }
+
+        botao.innerText = conteudo
+    }
+</script>
+
+<div>Isso é um spoiler</div>
+<div>Isso não é um spoiler</div>
+
+<button style="margin-top: 20px; margin-bottom: 20px;">Ocultar spoiler</button>

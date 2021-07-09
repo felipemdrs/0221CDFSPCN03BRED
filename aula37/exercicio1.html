@@ -1,0 +1,13 @@
+<script>
+    document.querySelector('button').onclick = () => {
+        let nome = document.querySelector('input').value
+        document.querySelector('#frase').innerText = 'Olá, ' + nome
+    }
+</script>
+
+<label>Nome</label>
+<input type="text" placeholder="Digite seu nome">
+<br>
+<button style="margin-top: 20px; margin-bottom: 20px;">Mostrar Frase</button>
+
+<h2 id="frase"></h2>

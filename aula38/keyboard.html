@@ -1,0 +1,22 @@
+<form>
+    <label>Password</label>
+    <input id="password" type="password"/>
+    <br>    
+    <label>Repeat Password</label>
+    <input id="repeat" type="password"/>
+
+    <input type="submit" value="Cadastrar" disabled/>
+</form>
+
+<script>
+    document.querySelector('#repeat').onkeyup = (e) => {
+        let password = document.querySelector('#password').value
+        let repeatPassword = e.target.value
+
+        if (password == repeatPassword) {
+            document.querySelector('input[type="submit"]').disabled = false
+        } else {
+            document.querySelector('input[type="submit"]').disabled = true
+        }
+    }
+</script>

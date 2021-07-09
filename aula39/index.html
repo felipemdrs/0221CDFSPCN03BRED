@@ -1,0 +1,32 @@
+<style>
+    .acertou {
+        color: green;
+    }
+</style>
+Quiz
+<h2>A terra é...?</h2>
+<form>
+    <input type="radio" name="resposta">
+    <label>Circulo</label>
+    <br>
+    <input type="radio" name="resposta">
+    <label>Esférica</label>
+    <br>
+    <input type="radio" name="resposta">
+    <label>Plana</label>
+    <br>
+</form>
+<button>Responder</button>
+
+<script>
+    let button = document.querySelector('button')
+    button.onclick = () => {
+        const respostaCerta = document.querySelectorAll('label')[2]
+        respostaCerta.classList.add('acertou')
+        button.disabled = true
+
+        document.querySelectorAll('input').forEach(e => {
+            e.disabled = true
+        })
+    }
+</script>

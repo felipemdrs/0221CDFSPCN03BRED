@@ -1,0 +1,22 @@
+<style>
+    li {
+        cursor: pointer;
+    }
+</style>
+<ul>
+    <li>Arroz</li>
+    <li>Feijão</li>
+    <li>Macarrão</li>
+    <li>Carne</li>
+</ul>
+
+<h2>Você selecionou: <span>Nada</span></h2>
+
+<script>
+    let ul = document.querySelector('ul')
+
+    ul.onclick = (e) => {
+        let target = e.target
+        document.querySelector('span').innerText = target.innerText 
+    }
+</script>
