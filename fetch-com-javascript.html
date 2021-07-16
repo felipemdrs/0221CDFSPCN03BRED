@@ -1,0 +1,33 @@
+<input type="search" placeholder="Digite aqui"/><button>Pesquisar</button>
+
+<ul>
+</ul>
+
+<script>
+  // Obtém elemento da lista
+  const lista = document.querySelector('ul')
+
+  // Faz consulta da API e constroi a lista
+  async function obterPersonagens (nome) {
+    const resultado = await fetch(`https://rickandmortyapi.com/api/character?name=${nome}`)
+    const body = await resultado.json()
+
+    // Limpa a lista antes de adicionar os elementos
+    lista.innerText = ''
+
+    for (const personagem of body.results) {
+      lista.innerHTML += `<li><img src="${personagem.image}"/><br>${personagem.name}</li>`
+    }
+  }
+
+  // Ouve click do botão
+  document.querySelector('button').onclick = () => {
+    let busca = document.querySelector('input').value
+    obterPersonagens(busca)
+  }
+
+  // Executa quando a página for carregada
+  window.onload = () => {
+    obterPersonagens('')
+  }
+</script>
