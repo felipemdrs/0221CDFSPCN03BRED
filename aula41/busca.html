@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+<input class="input" type="search"> <button id="buscar" class="button">Pesquisar</button>
+
+<ul id="resultados">    
+</ul>
+
+<script>
+    const btnBusca = document.getElementById('buscar')
+    const ulResultados = document.getElementById('resultados')
+    
+    btnBusca.onclick = () => {
+        const texto = document.querySelector('input').value
+        buscar(texto)
+        alterarUrl('query', texto)
+    }
+
+    async function buscar(texto) {
+        const fetchResult = await fetch(`http://localhost:3000/buscar?query=${texto ? texto : ''}`)
+        const lista = await fetchResult.json()
+
+        ulResultados.innerHTML = ''
+
+        for (const dado of lista) {
+            ulResultados.innerHTML += `<li>Nome: ${dado.nome}, Tipo: ${dado.tipo}</li>`
+        }
+    }
+
+    function alterarUrl(key, value) {
+        const query = new URLSearchParams()
+        query.set(key, value)
+        location.search = query.toString()
+    }
+
+    window.onload = () => {
+        const query = new URLSearchParams(location.search)
+        const valorBuscado = query.get('query')
+
+        document.querySelector('input').value = valorBuscado
+        buscar(valorBuscado)
+    }
+</script>

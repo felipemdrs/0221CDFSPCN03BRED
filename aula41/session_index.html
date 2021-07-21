@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+<h2 class="title">(Session) Form de auto-conhecimento pessoal</h2>
+
+<div>
+    <form class="control">
+        <label class="label">
+            Nome
+            <input class="input" name="nomeCompleto"/>
+        </label>
+        <label class="label">
+            Idade
+            <input class="input" name="idade"/>
+        </label>
+        <label class="label">
+            Cidade
+            <input class="input" name="cidade"/>
+        </label>
+        <label class="label">
+            <input type="checkbox" name="temCachorro"/>
+            Tem cachorro?
+        </label>
+        <input class="button" type="submit">
+    </form>
+    <button id="rascunho" class="button">Salvar rascunho</button>
+    <button id="resetar" class="button">Resetar</button>
+</div>
+
+<script>
+    const LOCAL_STORAGE_FORM_KEY = 'rascunhoDoForm'
+
+    // SALVANDO VALORES NO LOCALSTORAGE
+
+    const btnRascunho = document.getElementById('rascunho')
+
+    btnRascunho.onclick = () => {
+        salvar(LOCAL_STORAGE_FORM_KEY, obterValoresDoForm())
+    }
+
+    function obterValoresDoForm() {
+        return {
+            nomeCompleto: obterValorDoInput('nomeCompleto'),
+            idade: obterValorDoInput('idade'),
+            cidade: obterValorDoInput('cidade'),
+            temCachorro: document.querySelector(`input[name="temCachorro"]`).checked
+        }
+    }
+
+    function obterValorDoInput(name) {
+        return document.querySelector(`input[name="${name}"]`).value
+    }
+
+    function salvar(key, objeto) {
+        sessionStorage.setItem(key, JSON.stringify(objeto))
+    }
+
+    // CARREGANDO VALORES DO LOCALSTORAGE
+
+    function carregarForm() {
+        const valores = JSON.parse(sessionStorage.getItem(LOCAL_STORAGE_FORM_KEY))
+
+        if (valores) {
+            exibirValorDoInput('nomeCompleto', valores.nomeCompleto)
+            exibirValorDoInput('idade', valores.idade)
+            exibirValorDoInput('cidade', valores.cidade)
+
+            document.querySelector(`input[name="temCachorro"]`).checked = valores.temCachorro
+        }
+    }
+
+    function exibirValorDoInput(name, value) {
+        document.querySelector(`input[name="${name}"]`).value = value
+    }
+
+    window.onload = carregarForm
+
+    // RESETAR FORM
+
+    const btnResetar = document.getElementById('resetar')
+
+    btnResetar.onclick = () => {
+        document.querySelector('form').reset()
+        sessionStorage.clear()
+    }
+</script>
